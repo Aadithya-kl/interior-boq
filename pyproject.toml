@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "interior-boq"
+version = "0.1.0"
+description = "Bill of quantities (BOQ) and quote maths for home interiors: GST-inclusive rates, A/B options, totals by room and category, margins, discount before GST."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Hexaspace" }]
+keywords = ["boq", "bill of quantities", "interior design", "estimate", "quotation", "gst", "india", "construction"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Developers",
+  "Topic :: Office/Business :: Financial :: Accounting",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/interior_boq"]
